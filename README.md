@@ -2,8 +2,7 @@
 TP du cours d'apprentissage automatique du master 2 science du langage, parcours IDL
 Université Grenoble Alpes - Année universitaire 2022-2023
 
-**1. TP CNN : Classification d'expressions faciales par les Réseaux de Neurones Convolutifs**
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11-4X3fYpr0X1EcVFrYVdZuIs4JXdGpoP?usp=sharing)
+## **1. TP CNN : Classification d'expressions faciales par les Réseaux de Neurones Convolutifs** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11-4X3fYpr0X1EcVFrYVdZuIs4JXdGpoP?usp=sharing)
 
 Dans ce TP, vous allez entraîner un modèle CNN (ConvNet) pour classifier les expressions faciales. 
 
@@ -22,9 +21,20 @@ Référence :
 2. Corpus disponible sur kaggle: [Face expression recognition dataset](https://www.kaggle.com/datasets/jonathanoheix/face-expression-recognition-dataset) 
 3. Explications sur les différentes couches : [Comprendre les Réseaux de Neurones Convolutifs (CNN)](https://yannicksergeobam.medium.com/comprendre-les-r%C3%A9seaux-de-neurones-convolutifs-cnn-d5f14d963714)
 
-**2. TP NMT : Méthodes de la traduction automatique neuronale**
-- TP1 : Modèle de traduction simple (deux RNNs, sans méchanisme d'attention)
-- TP2 : Modèle de traduction simple (deux RNNs, avec méchanisme d'attention)
-- TP3 : Modèle de traduction composé de transformer
+## **2. TP NMT : Méthodes de la traduction automatique neuronale**
+### TP1 : Modèle de traduction simple (deux RNNs, sans méchanisme d'attention) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1Dgs23InXNQhtaOnkw42Oa53i768YOGqb/view?usp=sharing)
+
+Dans ce TP du cours `Modèles avancés d'apprentissage automatique`, vous allez vous initier aux méthodes de traduction automatique neuronales notamment aux architecture Encodeur-Décodeur. 
+
+Dans ce premier TP, l'objectif est d'étudier et d'entraîner un modèle Encodeur-Décodeur simple en utilisant deux RNNs. La tâche sera de traduire de l'anglais vers le français. Cette tâche de traduction automatique sera réalisée à l'aide d'un modèle de séquence à séquence [Sequence to Sequence Learning with Neural Networks](https://arxiv.org/abs/1409.3215), dans lequel deux réseaux neuronaux récurrents travaillent de concert pour transformer une séquence de mots d'entrée en une autre séquence de mots de sortie. La qualité de la traduction sera évaluée en utilisant la métrique BLEU. 
+
+Pour ce faire, vous travaillerez sur ce *Jupyter Notebook* qui utilisera un dossier `pyfiles` contenant trois fichiers python (`py`), qui traitent la préparation de données et la mise en oeuvre des modèles. Vous n'aurez pas à modifier ces fichiers. 
+
+Vous utiliserez les outils suivants:
+1. [PyTorch](https://pytorch.org/docs/stable/index.html) : une bibliothèque Python *open-source* pour l'apprentissage automatique
+2. Google Colab, qui héberge ce *Jupyter Notebook*. 
+
+### TP2 : Modèle de traduction simple (deux RNNs, avec méchanisme d'attention)
+### TP3 : Modèle de traduction composé de transformer
 
 

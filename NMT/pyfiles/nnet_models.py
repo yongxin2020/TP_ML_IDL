@@ -809,7 +809,7 @@ class EncoderDecoder(nn.Module):
         translation_output = namedtuple('translation_output', ['score', 'output'])
         return translation_output(round(bleu.score, 2), predicted_list)
 
-    def train_step(self, batch):
+    def train_step(self, batch, train=True):
         xs, xs_len, ys, ys_len = batch['source'], batch['source_len'], batch['target'], batch['target_len']
         source_lang, target_lang = batch['source_lang'], batch['target_lang']
 
@@ -824,9 +824,16 @@ class EncoderDecoder(nn.Module):
         bsz = xs.size(0)
         starts = self.START.expand(bsz, 1)
         loss = 0
-        self.zero_grad()
-        self.encoder.train()
-        self.decoder.train()
+        if train:
+            self.zero_grad()
+            self.encoder.train()
+            self.decoder.train()
+        else:
+            self.encoder.eval()
+            self.decoder.eval()
+        # self.zero_grad()
+        # self.encoder.train()
+        # self.decoder.train()
 
         encoder_results = self.encoder(xs, xs_len=xs_len, lang=source_lang)
         encoder_output = encoder_results['encoder_output']
@@ -847,10 +854,17 @@ class EncoderDecoder(nn.Module):
 
         scores = decoder_output.view(-1, decoder_output.size(-1))
         loss = self.criterion(scores, ys.view(-1)) / ys_len.sum()
-        loss.backward()
-        self.update_params()
+
+        if train:
+            loss.backward()
+            self.update_params()
+        # loss.backward()
+        # self.update_params()
 
         return loss.item()
+
+    def dev_step(self, batch):
+        return self.train_step(batch, train=False)
 
     def eval_step(self, batch):
         xs, xs_len = batch['source'], batch['source_len']
