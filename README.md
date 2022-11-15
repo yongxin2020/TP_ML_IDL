@@ -35,7 +35,14 @@ Vous utiliserez les outils suivants:
 1. [PyTorch](https://pytorch.org/docs/stable/index.html) : une bibliothèque Python *open-source* pour l'apprentissage automatique
 2. Google Colab, qui héberge ce *Jupyter Notebook*. 
 
-### TP2 : Modèle de traduction simple (deux RNNs, avec méchanisme d'attention)
+### TP2 : Modèle de traduction simple (deux RNNs, avec méchanisme d'attention) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1U8G0tGuPSPxDOIGU-TgguKXVKWDifD6m/view?usp=sharing)
+
+Ce TP du cours Modèles avancés d'apprentissage automatique, est la suite du TP de traduction automatique neuronale utilisant une architecture Encodeur-Décodeur.
+
+Dans ce deuxième TP, l'objectif est d'étudier le mécanisme d'attention ajouté au modèle Encodeur-Décodeur. Toute la première partie sur le traitement du corpus reste similaire au TP précédent. Les modifications apportées se trouvant à partir de la définition du modèle.
+
+[TP2_NMT_QA.docx](https://cloud.univ-grenoble-alpes.fr/s/yZeLsz7PZqDeQBE)
+
 ### TP3 : Modèle de traduction composé de transformer
 
 
