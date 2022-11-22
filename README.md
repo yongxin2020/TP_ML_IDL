@@ -43,6 +43,8 @@ Dans ce deuxième TP, l'objectif est d'étudier le mécanisme d'attention ajout�
 
 [TP2_NMT_QA.docx](https://cloud.univ-grenoble-alpes.fr/s/yZeLsz7PZqDeQBE)
 
-### TP3 : Modèle de traduction composé de transformer
+### TP3 : Modèle de traduction composé de transformer [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BpwZ2fNaUul65yCNbTdPu1zIA5I8SK9Z?usp=sharing)
 
+Ce TP du cours Modèles avancés d'apprentissage automatique, est la suite du TP de traduction automatique neuronale utilisant une architecture Encodeur-Décodeur sans et avec le mécanisme d'attention.
 
+L'architecture transformer (cf. l'article Attention Is All You Need) est maintenant l'état de l'art de la traduction automatique neuronale. L'encodeur utilise un mécanisme de self-attention sur les couches d'entrée tandis que le décodeur combine la self-attention et l'attention sur l'encodeur. Contrairement au RNN, aucune recurrence n'est utilisée. De ce fait un modèle transformer est plus rapide à apprendre.
